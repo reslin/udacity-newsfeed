@@ -2,4 +2,5 @@
     <string name="app_name">News Feed</string>
     <string name="no_date_available">No date available.</string>
     <string name="no_authors_known">No authors known.</string>
+    <string name="no_internet">No network access!</string>
 </resources>
