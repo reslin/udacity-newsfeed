@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -9,13 +9,26 @@
     </style>
 
     <style name="ContentsTextView" parent="AppTheme">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:paddingTop">@dimen/small_space</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="ContentsTextView.Black">
+    <style name="ContentsTextView.SmallMarginTop">
+        <item name="android:layout_marginTop">@dimen/small_space</item>
+    </style>
+
+    <style name="ContentsTextView.NormalMarginTop">
+        <item name="android:layout_marginTop">@dimen/normal_space</item>
+    </style>
+
+    <style name="ContentsTextView.NormalMarginTop.Black">
         <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <style name="ContentsTextView.SmallMarginTop.MediumSize_Black_Serif">
+        <item name="android:textSize">@dimen/medium_size</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:fontFamily" tools:ignore="NewApi">serif</item>
     </style>
 
 </resources>
