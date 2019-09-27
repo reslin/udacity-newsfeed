@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout android:id="@+id/item_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/list_item_height"
+    android:layout_marginEnd="@dimen/normal_space"
+    android:layout_marginLeft="@dimen/normal_space"
+    android:layout_marginRight="@dimen/normal_space"
+    android:layout_marginStart="@dimen/normal_space"
+    android:minHeight="@dimen/list_item_height">
+
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/normal_space"
+        android:text="2019-09-27"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2019-09-27" />
+
+    <TextView
+        android:id="@+id/contributorTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Peter Walker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+        tools:text="Peter Walker" />
+
+    <TextView
+        android:id="@+id/sectionNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Politics"
+        android:textColor="@android:color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Politics" />
+
+    <TextView
+        android:id="@+id/webTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:singleLine="false"
+        android:text="Brexit: Amber Rudd says Boris Johnson's language 'does incite violence' – live news"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/medium_size"
+        app:fontFamily="serif"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contributorTextView"
+        tools:text="Brexit: Amber Rudd says Boris Johnson's language 'does incite violence' – live news" />
+</androidx.constraintlayout.widget.ConstraintLayout>
