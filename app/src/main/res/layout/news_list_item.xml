@@ -11,31 +11,30 @@
     android:layout_marginStart="@dimen/normal_space"
     android:minHeight="@dimen/list_item_height">
 
-
     <TextView
         android:id="@+id/dateTextView"
-        style="@style/ContentsTextView.NormalMarginTop"
+        style="@style/WrapContentStyle.NormalMarginTop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="2019-09-27" />
 
     <TextView
         android:id="@+id/contributorTextView"
-        style="@style/ContentsTextView.SmallMarginTop"
+        style="@style/WrapContentStyle.SmallMarginTop"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/dateTextView"
         tools:text="Peter Walker" />
 
     <TextView
         android:id="@+id/sectionNameTextView"
-        style="@style/ContentsTextView.NormalMarginTop.Black"
+        style="@style/WrapContentStyle.NormalMarginTop.Black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Politics" />
 
     <TextView
         android:id="@+id/webTitleTextView"
-        style="@style/ContentsTextView.SmallMarginTop.MediumSize_Black_Serif"
+        style="@style/WrapContentStyle.SmallMarginTop.MediumSize_Black_Serif"
         android:ellipsize="end"
         android:maxLines="2"
         android:singleLine="false"

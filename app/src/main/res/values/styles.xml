@@ -8,27 +8,32 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="ContentsTextView" parent="AppTheme">
+    <style name="WrapContentStyle" parent="AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
 
-    <style name="ContentsTextView.SmallMarginTop">
+    <style name="WrapContentStyle.SmallMarginTop">
         <item name="android:layout_marginTop">@dimen/small_space</item>
     </style>
 
-    <style name="ContentsTextView.NormalMarginTop">
+    <style name="WrapContentStyle.NormalMarginTop">
         <item name="android:layout_marginTop">@dimen/normal_space</item>
     </style>
 
-    <style name="ContentsTextView.NormalMarginTop.Black">
+    <style name="WrapContentStyle.NormalMarginTop.Black">
         <item name="android:textColor">@android:color/black</item>
     </style>
 
-    <style name="ContentsTextView.SmallMarginTop.MediumSize_Black_Serif">
+    <style name="WrapContentStyle.SmallMarginTop.MediumSize_Black_Serif">
         <item name="android:textSize">@dimen/medium_size</item>
         <item name="android:textColor">@android:color/black</item>
         <item name="android:fontFamily" tools:ignore="NewApi">serif</item>
+    </style>
+
+    <style name="WrapContentProgressbarStyle" parent="@style/Widget.AppCompat.ProgressBar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
     </style>
 
 </resources>
