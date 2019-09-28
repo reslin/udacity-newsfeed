@@ -1,7 +1,6 @@
 package com.example.android.newsfeed;
 
 import android.text.TextUtils;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -18,14 +17,12 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
 
-
 /**
  * Helper class with static methods for JSON and Networking
  */
 
-public final class Utils {
+final class Utils {
 
-  private static final String LOG_TAG = "UTILS";
   private static final int NET_READ_TIMEOUT = 10000;  //milliseconds --> 10 secs
   private static final int NET_CONNECT_TIMEOUT = 15000;  //milliseconds --> 15 secs
   private static final String NET_REQUEST_METHOD = "GET";
@@ -43,23 +40,14 @@ public final class Utils {
    * @param urlString queries the API
    * @return a List of news
    */
-  public static List<NewsTitle> fetchNewsList(String urlString) {
-
-/*        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
- */
-
+  static List<NewsTitle> fetchNewsList(String urlString) {
     URL url = createUrl(urlString);
 
     String jsonResponse = null;
     try {
       jsonResponse = makeHttpRequest(url);
-    } catch (IOException e) {
-      Log.e(LOG_TAG, "Problem making the HTTP request.", e);
+    } catch (IOException ignored) {
+      // if no success, response is null and the then called method will return null, too
     }
 
     return extractNewsTitleListFromJson(jsonResponse);
@@ -74,7 +62,6 @@ public final class Utils {
    * @return the gathered news
    */
   private static List<NewsTitle> extractNewsTitleListFromJson(String newsTitleJSON) {
-
     if (TextUtils.isEmpty(newsTitleJSON)) {
       return null;  // nothing to do
     }
@@ -100,7 +87,7 @@ public final class Utils {
         JSONArray tagsJsonArray = currentNewsTitle.getJSONArray("tags");
         StringBuilder contributor = new StringBuilder();
         for (int j = 0; j < tagsJsonArray.length(); j++) {
-          JSONObject tag = tagsJsonArray.getJSONObject(i);
+          JSONObject tag = tagsJsonArray.getJSONObject(j);
           contributor.append(tag.getString("webTitle"));  //the authors name
           if (j < (tagsJsonArray.length() - 1)) { //e.g. 3 contributors, 2 commas => "length - 1"
             contributor.append(", ");
@@ -132,8 +119,8 @@ public final class Utils {
     URL url = null;
     try {
       url = new URL(stringUrl);
-    } catch (MalformedURLException e) {
-      Log.e(LOG_TAG, "Problem building the URL ", e);
+    } catch (MalformedURLException ignored) {
+      // if not valid, url == null
     }
     return url;
   }
@@ -164,11 +151,9 @@ public final class Utils {
       if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
         inputStream = urlConnection.getInputStream();
         jsonResponse = readFromStream(inputStream);
-      } else {
-        Log.e(LOG_TAG, "Error response code: " + urlConnection.getResponseCode());
       }
-    } catch (IOException e) {
-      Log.e(LOG_TAG, "Problem retrieving the JSON results.", e);
+    } catch (IOException ignored) {
+      // if no success: response remains empty
     } finally {
       if (urlConnection != null) {
         urlConnection.disconnect();

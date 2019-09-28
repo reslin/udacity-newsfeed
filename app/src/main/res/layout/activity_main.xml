@@ -15,7 +15,6 @@
         style="@style/WrapContentProgressbarStyle"
         android:layout_centerInParent="true" />
 
-    <!-- Loading indicator is only shown before the first load -->
     <TextView
         android:id="@+id/no_data"
         style="@style/WrapContentStyle.SmallMarginTop.MediumSize_Black_Serif"

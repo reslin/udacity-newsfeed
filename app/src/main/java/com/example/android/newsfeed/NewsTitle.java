@@ -1,6 +1,6 @@
 package com.example.android.newsfeed;
 
-public class NewsTitle {
+class NewsTitle {
 
   /**
    * Date and time of the news, named as in the API
@@ -37,8 +37,8 @@ public class NewsTitle {
    * @param webTitle            title, not null
    * @param webUrl              URL of title, not null
    */
-  public NewsTitle(String webPublicationDate, String sectionName, String contributorWebTitle,
-                   String webTitle, String webUrl) {
+  NewsTitle(String webPublicationDate, String sectionName, String contributorWebTitle,
+            String webTitle, String webUrl) {
     this.webPublicationDate = webPublicationDate;
     this.sectionName = sectionName;
     this.contributorWebTitle = contributorWebTitle;
@@ -47,26 +47,26 @@ public class NewsTitle {
   }
 
   /**
-   * Only getters needed, the Constructor sets every value.
+   * Only getters needed, the Constructor sets every values.
    */
 
-  public String getDateString() {
+  String getDateString() {
     return webPublicationDate;
   }
 
-  public String getSectionName() {
+  String getSectionName() {
     return sectionName;
   }
 
-  public String getContributorWebTitle() {
+  String getContributorWebTitle() {
     return contributorWebTitle;
   }
 
-  public String getWebTitle() {
+  String getWebTitle() {
     return webTitle;
   }
 
-  public String getWebUrl() {
+  String getWebUrl() {
     return webUrl;
   }
 }

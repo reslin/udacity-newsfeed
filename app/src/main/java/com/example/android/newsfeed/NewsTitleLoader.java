@@ -16,7 +16,7 @@ public class NewsTitleLoader extends AsyncTaskLoader<List<NewsTitle>> {
    * @param context of the app
    * @param url     to query
    */
-  public NewsTitleLoader(Context context, String url) {
+  NewsTitleLoader(Context context, String url) {
     super(context);
     this.url = url;
   }

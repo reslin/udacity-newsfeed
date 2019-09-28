@@ -3,13 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="@dimen/list_item_height"
-    android:layout_marginEnd="@dimen/normal_space"
-    android:layout_marginLeft="@dimen/normal_space"
-    android:layout_marginRight="@dimen/normal_space"
-    android:layout_marginStart="@dimen/normal_space"
-    android:minHeight="@dimen/list_item_height">
+    android:minHeight="@dimen/list_item_height"
+    android:paddingEnd="@dimen/medium_size"
+    android:paddingLeft="@dimen/medium_size"
+    android:paddingRight="@dimen/medium_size"
+    android:paddingStart="@dimen/medium_size">
 
     <TextView
         android:id="@+id/dateTextView"
@@ -41,4 +41,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contributorTextView"
         tools:text="Brexit: Amber Rudd says Boris Johnson's language 'does incite violence' – live news" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
