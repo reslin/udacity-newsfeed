@@ -28,11 +28,10 @@ public class NewsTitleLoader extends AsyncTaskLoader<List<NewsTitle>> {
 
   @Override
   public List<NewsTitle> loadInBackground() {
-    if (url == null) {
+    if (null == url) {
       return null;
     }
 
-    // Perform the network request, parse the response, and extract a list of earthquakes.
-    return QueryUtils.fetchEarthquakeData(mUrl);
+    return Utils.fetchNewsList(url);
   }
 }
